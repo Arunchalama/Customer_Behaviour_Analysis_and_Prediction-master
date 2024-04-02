@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Behavior Analysis</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Behavior Analysis</h1>
+        <label for="login_count">Login Count:</label>
+        <input type="text" id="login_count">
+        <label for="purchase_count">Purchase Count:</label>
+        <input type="text" id="purchase_count">
+        <label for="time_spent">Time Spent (in minutes):</label>
+        <input type="text" id="time_spent">
+        <button onclick="analyze()">Analyze</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function analyze() {
+            // Get the values of input fields
+            const loginCount = document.getElementById('login_count').value;
+            const purchaseCount = document.getElementById('purchase_count').value;
+            const timeSpent = document.getElementById('time_spent').value;
+
+            // Construct the data object
+            const data = { "login_count": loginCount, "purchase_count": purchaseCount, "time_spent": timeSpent };
+
+            // Redirect to another page
+            window.location.href = '/another_page';
+        }
+    </script>
+</body>
+</html>
